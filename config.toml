@@ -7,7 +7,7 @@ paginate = "4"
 # post excerpt
 summaryLength = "30"
 # disqus short name
-disqusShortname = "" # get your shortname form here : https://disqus.com
+disqusShortname = "mfgaspar" # get your shortname form here : https://disqus.com
 # disable language
 disableLanguages = []
 
@@ -125,7 +125,7 @@ emaillink = "meanify@gmail.com"
 skype = "Reach out over skype"
 skypelink = "miguel.ferreira.gaspar"
 # contact form action
-contact_form_action = "#" # contact form works with : https://formspree.io
+contact_form_action = "https://formspree.io/xeqkwooe" # contact form works with : https://formspree.io
 # Google Analitycs
 google_analitycs_id = "UA-158955139-1"
 
@@ -146,7 +146,7 @@ link = "contact"
 
 # google map
 [params.gmap]
-enable = false
+enable = true
 gmap_api = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places"
 map_latitude = "38.5834705"
 map_longitude = "-7.9266024"

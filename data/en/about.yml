@@ -60,12 +60,12 @@ features:
     # service item loop
     - icon : ion-earth #ionicon pack v2 : https://ionicons.com/v2/ #ionicon pack v2 : https://ionicons.com/v2/
       name: Mobile and web 
-      content: "Mobilde and web design with the development of modern progressive application with focus on users and business."
+      content: "Mobile and web design with the development of modern progressive application focusing on users and business."
 
     # service item loop
     - icon : ion-headphone #ionicon pack v2 : https://ionicons.com/v2/ #ionicon pack v2 : https://ionicons.com/v2/
       name: Chatbots
-      content: "Creating chatbots is trivial, our value comes also on helping with bridgeing to business and extract the vlaue your need."
+      content: "Creating chatbots is trivial, our value comes from bridgeing to business and extract the value you are expecting."
 
     # service item loop
     - icon : ion-bug #ionicon pack v2 : https://ionicons.com/v2/ #ionicon pack v2 : https://ionicons.com/v2/
@@ -75,22 +75,22 @@ features:
     # service item loop
     - icon : ion-lock-combination #ionicon pack v2 : https://ionicons.com/v2/ #ionicon pack v2 : https://ionicons.com/v2/
       name: Internet of Things
-      content: "Our focus is on getting data into public or private clouds, and give all the meaning and value to your data."
+      content: "Our focus is on getting data into public or private clouds, giving all the meaning and value to your data."
 
     # service item loop
     - icon : ion-bug #ionicon pack v2 : https://ionicons.com/v2/ #ionicon pack v2 : https://ionicons.com/v2/
       name: Robotic Process Automation
-      content: "In the era of Digitalization and Digital Transformation, is vital to have smart process automation for growing businesses."
+      content: "In the era of digitalization and digital transformation, it is vital to have smart process automation for growing businesses."
 
     # service item loop
     - icon : ion-planet #ionicon pack v2 : https://ionicons.com/v2/ #ionicon pack v2 : https://ionicons.com/v2/
       name: Blockchain
-      content: "Get started with Blockchain. The technology will be widely adopted and we can help your start"
+      content: "Get started with Blockchain. The technology will be widely adopted and we can help your start on this area"
 
     # service item loop
     - icon : ion-compass #ionicon pack v2 : https://ionicons.com/v2/ #ionicon pack v2 : https://ionicons.com/v2/
       name: Legacy Tranformation
-      content: "We can help to re-eengineer your legacy systems, and build modern applications that can scale your business."
+      content: "We can help to re-eengineer your legacy systems, and build modern applications that can scale on public, private or hybrid cloud."
     
     # service item loop
     - icon : ion-ios-color-filter-outline #ionicon pack v2 : https://ionicons.com/v2/ #ionicon pack v2 : https://ionicons.com/v2/
@@ -112,11 +112,11 @@ mission_vision:
       
     # tab item loop
     - name : "Mission"
-      content : "Wathever is on private cloud, public cloud we are here to help transforming your business. Take the ultimate experince on technology"
+      content : "Wathever is on private cloud, public cloud we are here to help transforming your business. Take the ultimate experince on technology."
       
     # tab item loop
     - name : "Approach"
-      content : "We help you simplify, with the best experince and focus on understanding the business goals and challenges let's build success."
+      content : "We help you simplify, with the best experince and focus on understanding the business goals and challenges. Let's, together, build success."
 
 
 ############################# call to action #################################

@@ -2,8 +2,9 @@
 banner:
   enable : true
   bg_image : "images/slider-bg.jpg"
-  title : "A real company <br/> in the era of digital "
-  content : "We love challenges in the cloud and the work we do. We work closely with our clients to deliver the best possible solutions for their needs"
+  title : "A real company <br/> in the era of digital"
+  content : "We love cloud, challenges and innovation. Usually working closely with our customers to deliver the best possible solutions for their clients. 
+            Whatever the technology you are using, we can help you drive success!"
   button:
     enable : true
     label : "Discover Our Project, talk to us"
@@ -13,16 +14,16 @@ banner:
 about:
   enable : true
   title : "About Us"
-  description : "We are a company working delivering solutions and we love to mix Cloud, Internet of Things and Artifitial Intelligence"
+  description : "We are a company that delivers solutions, that can be either one or a combination of: Private, Public or Hybrid Cloud, Internet of Things and Artifitial Intelligence"
   content : "
   Whether your company is trying to increase productivity, revamp customer experiences, or make direct sales, most of the time AI is the answer, 
   but AI has some best friends as the cloud (private, public or even hybrid) and IoT. 
   
   
-  We are experience and love data streams that consumes and gives meaning and value to your data. We can help onboard data from the ground field using the right
-  and economic solution that's available and we will fight back if you are not taking the right direction. 
+  We are experienced and data lovers, able of ingesting it in batch or realtime, we provide meaning and value to your data. We can help onboard data, from the ground field up to consumer. 
+  using the right and economic solution that are available and we will. Hope you don't mind we fight back and advise you on the best decisions. 
   
-  
+
   If you don't have a challenge, we will provide you some, your business will have reasons to smile.
   "
 
@@ -45,7 +46,7 @@ portfolio:
   There’s no doubt technology is ushering in some fascinating new ways of connecting brands with consumers. The company that makes things more easy to consume is the one that best sell it. 
 
 
-  We would love to discuss and take forward some innovation and would like to brainstorm some ideas for your business. We can make it work and make happen. 
+  We would love to discuss and take forward some innovation, so tet's brainstorm some improvments on your business. We can make it work and/or make it happen. 
   "
   button:
     enable : true

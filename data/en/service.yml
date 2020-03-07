@@ -15,19 +15,19 @@ featured_service:
     - name : "Best of Cloud"
       icon : "ion-erlenmeyer-flask"
       color : "primary"
-      content : "We take care of the challenges of designing the solution you really expect."
+      content : "We take care of the challenges of designing cloud solution that scale with the needs and in your budget."
       
     # featured service item loop
     - name : "Bring challenges"
       icon : "ion-leaf"
       color : "primary-dark"
-      content : "Experinced in customer challenges, we help your organization to make the difference."
+      content : "Experinced in customer challenges, we help your organization on innovation and make the difference."
       
     # featured service item loop
     - name : "Innovation"
       icon : "ion-lightbulb"
       color : "primary-darker"
-      content : "If others say it's impossible, let us know, we are happy with those kind of challenges."
+      content : "If others say it's impossible, let us know, we are happy to accept and take those challenges from you."
 
       
 ############################# Service ###############################
@@ -44,12 +44,12 @@ service:
     # service item loop
     - icon : ion-earth #ionicon pack v2 : https://ionicons.com/v2/ #ionicon pack v2 : https://ionicons.com/v2/
       name: Mobile and web 
-      content: "Mobilde and web design with the development of modern progressive application with focus on users and business."
+      content: "Mobile and web design with the development of modern progressive application that focus on users and business."
 
     # service item loop
     - icon : ion-headphone #ionicon pack v2 : https://ionicons.com/v2/ #ionicon pack v2 : https://ionicons.com/v2/
       name: Chatbots
-      content: "Creating chatbots is trivial, our value comes also on helping with bridgeing to business and extract value."
+      content: "Creating chatbots is trivial, our value comes from getting the most value of technology."
 
     # service item loop
     - icon : ion-bug #ionicon pack v2 : https://ionicons.com/v2/ #ionicon pack v2 : https://ionicons.com/v2/
@@ -59,17 +59,17 @@ service:
     # service item loop
     - icon : ion-lock-combination #ionicon pack v2 : https://ionicons.com/v2/ #ionicon pack v2 : https://ionicons.com/v2/
       name: Internet of Things
-      content: "Our focus is on getting data into public or private clouds, and give all the meaning and value to your data."
+      content: "Our focus is on getting data into public, private or hybrid clouds, and give all the meaning and value to your data."
 
     # service item loop
     - icon : ion-bug #ionicon pack v2 : https://ionicons.com/v2/ #ionicon pack v2 : https://ionicons.com/v2/
       name: Robotic Process Automation
-      content: "In the era of Digitalization and Digital Transformation, is vital to have smart process automation for growing businesses."
+      content: "In the era of digitalization and digital transformation, it is vital to have smart process automation for growing businesses."
 
     # service item loop
     - icon : ion-planet #ionicon pack v2 : https://ionicons.com/v2/ #ionicon pack v2 : https://ionicons.com/v2/
       name: True Tech Experiences
-      content: "Design and develop amazing experience on Android TV, Auto and Wereables with the user experience your target deserves."
+      content: "Design and develop amazing experience on android TV, auto and wereables with the user experience your target deserves."
 
     # service item loop
     - icon : ion-compass #ionicon pack v2 : https://ionicons.com/v2/ #ionicon pack v2 : https://ionicons.com/v2/
