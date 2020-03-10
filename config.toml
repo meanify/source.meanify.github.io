@@ -113,6 +113,7 @@ weight = 6
 #################### default parameters ################################
 [params]
 logo = "images/logo.svg"
+favicon = "images/favicon.svg"
 # Meta data
 description = "MEANIFY | All the meaning you can get from your data!"
 author = "Meanify"

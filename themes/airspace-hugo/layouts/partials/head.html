@@ -19,7 +19,17 @@
   <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
 
   {{ "<!--Favicon-->" | safeHTML }}
+  <!--
   <link rel="shortcut icon" href="{{ `images/favicon.png` | absURL }}" type="image/x-icon">
   <link rel="icon" href="{{ `images/favicon.png` | absURL }}" type="image/x-icon">
+  -->
+  
+  {{ if .Site.Params.favicon }}
+    <link rel="icon" href="/{{ .Site.Params.favicon }}" sizes="any" type="image/svg+xml">
+    <link rel="icon" href="/{{ .Site.Params.favicon }}" sizes="any" type="image/svg+xml">
+  {{ else }}
+    <link rel="icon" href="/{{ .Site.Params.logo }}" sizes="any" type="image/svg+xml">
+    <link rel="icon" href="/{{ .Site.Params.logo }}" sizes="any" type="image/svg+xml">
+  {{ end }}
 
 </head>
