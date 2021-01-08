@@ -15,47 +15,47 @@ feature:
   feature_item:
     # feature item loop
     - name : "High-perfomant solutions"
-      icon : "ti-pulse"
+      icon : "ti-dashboard"
       content : "Businesses have different needs, requirements and goals. We can take full development or work with your team!"
       
     - name : "Mobile and Web"
-      icon : "ti-package"
+      icon : "ti-mobile"
       content : "Mobile and web design with the development of modern progressive application that focus on users and business."
       
     - name : "Chatbots"
-      icon : "ti-alarm-clock"
+      icon : "ti-headphone-alt"
       content : "Creating chatbots is trivial, our value comes from getting the most value of technology applied to your business."
       
     - name : "Smart Analytics"
-      icon : "ti-credit-card"
+      icon : "ti-rocket"
       content : "Governance, workflows, deployment, monitoring and decisions are some of the considerations to have on the era of AI."
 
     - name : "Internet-of-Things"
-      icon : "ti-headphone-alt"
+      icon : "ti-light-bulb"
       content : "Our focus is on getting data into public, private or hybrid clouds, and give all the meaning and value to your data."
       
     - name : "Customer advisory"
-      icon : "ti-cloud-up"
+      icon : "ti-direction-alt"
       content : "Make sure your venders and partners are taking you on the riht direction making sure you have the right vision of future."
 
     - name : "Hybrid Cloud Support"
-      icon : "ti-cloud-up"
+      icon : "ti-cloud"
       content : "To the cloud what belongs to the cloud and keep in house what makes sense for your business."
       
     - name : "Modernization"
-      icon : "ti-cloud-up"
+      icon : "ti-check-box"
       content : "We can help to re-eengineer your legacy systems, and build modern applications that can scale your business."
 
     - name : "True-tech Experiences"
-      icon : "ti-cloud-up"
+      icon : "ti-medall"
       content : "Design and develop amazing experience on android TV, auto and wereables with the user experience your target deserves."
 
     - name : "Analytics full-lifecycle"
-      icon : "ti-cloud-up"
+      icon : "ti-infinite"
       content : "Let's help you understand how to achieve, or make work for you."
 
     - name : "Robotic Process Automation"
-      icon : "ti-cloud-up"
+      icon : "ti-target"
       content : "To the cloud what belongs to the cloud and keep in house what makes sense."
 
     - name : "Mainframe offload"
