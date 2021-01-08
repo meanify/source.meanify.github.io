@@ -24,7 +24,7 @@ feature:
       
     - name : "Chatbots"
       icon : "ti-alarm-clock"
-      content : "Creating chatbots is trivial, our value comes from getting the most value of technology."
+      content : "Creating chatbots is trivial, our value comes from getting the most value of technology applied to your business."
       
     - name : "Smart Analytics"
       icon : "ti-credit-card"
@@ -34,9 +34,13 @@ feature:
       icon : "ti-headphone-alt"
       content : "Our focus is on getting data into public, private or hybrid clouds, and give all the meaning and value to your data."
       
-    - name : "Cloud Support"
+    - name : "Customer advisory"
       icon : "ti-cloud-up"
-      content : "To the cloud what belongs to the cloud and keep in house what makes sense."
+      content : "Make sure your venders and partners are taking you on the riht direction making sure you have the right vision of future."
+
+    - name : "Hybrid Cloud Support"
+      icon : "ti-cloud-up"
+      content : "To the cloud what belongs to the cloud and keep in house what makes sense for your business."
       
     - name : "Modernization"
       icon : "ti-cloud-up"
@@ -46,9 +50,9 @@ feature:
       icon : "ti-cloud-up"
       content : "Design and develop amazing experience on android TV, auto and wereables with the user experience your target deserves."
 
-    - name : "Cloud Support"
+    - name : "Analytics full-lifecycle"
       icon : "ti-cloud-up"
-      content : "To the cloud what belongs to the cloud and keep in house what makes sense."
+      content : "Let's help you understand how to achieve, or make work for you."
 
     - name : "Robotic Process Automation"
       icon : "ti-cloud-up"
@@ -58,9 +62,7 @@ feature:
       icon : "ti-cloud-up"
       content : "Reduce the cost with mainframe by taking most of the workloads to Kubernetes."
 
-    - name : "Customer advisory"
-      icon : "ti-cloud-up"
-      content : "Make sure your venders and partners are taking you on the riht direction making sure you have the right vision of future."
+   
 
 ######################### Service #####################
 service:
@@ -69,7 +71,7 @@ service:
     # service item loop
     - title : "We are experts on doing smart scalable analytics"
       images:
-      - "images/analytics-1.jpg"
+      # - "images/analytics-1.jpg"
       - "images/analytics-2.jpg"
       - "images/analytics-3.jpg"
       content : "We love cloud, challenges and innovation. Usually working closely with our customers to deliver the best possible solutions for their clients. Whatever the technology you are using, we can help you drive success."

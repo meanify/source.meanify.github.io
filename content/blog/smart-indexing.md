@@ -1,5 +1,5 @@
 ---
-title: "Smart indexing of your business"
+title: "Smart indexing your business"
 date: 2020-10-18T10:07:21+06:00
 # post image
 image: "images/blog/smart-indexing.png"
@@ -50,7 +50,6 @@ Together with HCI, and while processing, pre-processing, enriching documents met
 Named Entities Recognition (NER), in English language: 
 
 ![image](../../images/blog/smart-indexing-ner.png)
-
 Stemming can be a bit trickier. There are two important phases when indexing documents: Index and Search. Stemming to be effective, should be applied on both indexing and search phases, and HCI allows to perform those configurations on internal indexes. 
 
  > Keep in mind that real value will come from training the models to recognize named entities for you specifically for your business, while steaming can be applied out-of-the-box, however applying both is where you will make the most improvements. 
