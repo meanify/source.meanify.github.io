@@ -1,7 +1,7 @@
 ######################## default configuration ####################
-baseURL = "https://meanify.github.io/"
-title = "MEANIFY | All the meaning from your data!"
-theme = "startup"
+baseURL = "http://examplesite.org/"
+title = "Bigspring Hugo"
+theme = "bigspring"
 languageName = "En"
 languageCode = "en-us"
 # post pagination
@@ -9,9 +9,9 @@ paginate = "3"
 # post excerpt
 summaryLength = "15"
 # disqus short name
-disqusShortname = "mfgaspar" # get your shortname form here : https://disqus.com
+disqusShortname = "" # get your shortname form here : https://disqus.com
 # google analytics
-googleAnalytics = "UA-158955139-1"
+googleAnalytics = "" # example : UA-123-45
 # unsafe html
 [markup.goldmark.renderer]
 unsafe = true
@@ -39,29 +39,24 @@ link = "plugins/slick/slick.min.js"
 
 # main menu
 [[menu.main]]
-name = "About Us"
-URL = "#"
+name = "Blog"
+URL = "blog"
 weight = 1
 
 [[menu.main]]
-name = "Services"
+name = "About"
 URL = "about"
 weight = 2
 
 [[menu.main]]
-name = "Blog"
-URL = "blog"
-weight = 3
-
-[[menu.main]]
 name = "Contact"
 URL = "contact"
-weight = 4
+weight = 3
 
 [[menu.main]]
 name = "FAQ"
 URL = "faq"
-weight = 5
+weight = 4
 
 # footer menu left
 [[menu.footer_left]]
@@ -72,12 +67,19 @@ URL = "#"
 name = "Quick Start"
 URL = "#"
 
+[[menu.footer_left]]
+name = "About"
+URL = "about"
+
 
 # footer menu middle
+[[menu.footer_middle]]
+name = "About"
+URL = "about"
 
-# [[menu.footer_middle]]
-# name = "Platform"
-# URL = "#"
+[[menu.footer_middle]]
+name = "Platform"
+URL = "#"
 
 [[menu.footer_middle]]
 name = "Features"
@@ -88,9 +90,9 @@ URL = "#"
 name = "Privacy Policy"
 URL = "privacy-policy"
 
-# [[menu.footer_right]]
-# name = "Terms & Conditions"
-# URL = "terms-conditions"
+[[menu.footer_right]]
+name = "Terms & Conditions"
+URL = "terms-conditions"
 
 [[menu.footer_right]]
 name = "FAQ"
@@ -98,21 +100,21 @@ URL = "faq"
 
 #################### default parameters ################################
 [params]
-logo = "images/logo.svg"
-logo_width = "80px"
+logo = "images/logo.png"
+logo_width = "100px"
 # Meta data
-description = "smart analytics intelligent innovation moderniation meanify iot cloud kubernetes"
-author = "Meanify"
+description = "This is meta description"
+author = "Themefisher"
 # contact form action
-contact_form_action = "https://formspree.io/xeqkwooe" # contact form works with https://formspree.io
+contact_form_action = "#" # contact form works with https://formspree.io
 
 ########### footer content ##########
 footer_menu_left = "Company"
 footer_menu_middle = "Product"
 footer_menu_right = "Support"
-footer_content = "MEANIFY | All the meaning you can get from your data!"
+footer_content = "Lorem ipsum dolor sit amet, consectetur elit. Consjat tristique eget amet, tempus eu at cttur."
 # copyright
-copyright = "Copyright &copy; 2021 [Meanify](https://www.meanify.org) All Rights Reserved"
+copyright = "Design By [Themefisher](https://themefisher.com/) Develop By [Gethugothemes](https://gethugothemes.com/)"
 
 # Preloader
 [params.preloader]
@@ -130,29 +132,19 @@ link = "contact"
 [[params.social]]
 title = "facebook"
 icon = "ti-facebook" # themify icon : https://themify.me/themify-icons
-link = "https://www.facebook.com/miguel.ferreira.gaspar"
+link = "#"
 
 [[params.social]]
 title = "twitter"
 icon = "ti-twitter-alt" # themify icon : https://themify.me/themify-icons
-link = "https://twitter.com/migfgaspar"
+link = "#"
 
 [[params.social]]
 title = "skype"
 icon = "ti-skype" # themify icon : https://themify.me/themify-icons
-link = "https://wa.me/00351962390920"
+link = "#"
 
 [[params.social]]
 title = "linkedin"
 icon = "ti-linkedin" # themify icon : https://themify.me/themify-icons
-link = "https://www.linkedin.com/company/meanify"
-
-[[params.social]]
-title = "git"
-icon = "ti-github" #ionicon pack v2 : https://ionicons.com/v2/
-link = "https://github.com/meanify"
-
-#[[params.social]]
-#title = "instagram"
-#icon = "ti-instagram" #ionicon pack v2 : https://ionicons.com/v2/
-#link = "https://www.instagram.com/mfgaspar/"
+link = "#"

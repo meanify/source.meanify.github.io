@@ -1,0 +1,128 @@
+####################### Banner #########################
+banner:
+  title : "We strive to be the best and <br> make awesome work."
+  image : "images/banner-art.svg"
+  content : "We've been working with technology that will take our companies strategy to another level. Rather than expecting people to get the knowledge they need, we can get you up to speed and work with your team on getting the best of the results."
+  button:
+    enable : true
+    label : "Contact With Us"
+    link : "contact"
+
+##################### Feature ##########################
+feature:
+  enable : true
+  title : "About Us"
+  feature_item:
+    # feature item loop
+    - name : "High-perfomant solutions"
+      icon : "ti-pulse"
+      content : "Businesses have different needs, requirements and goals. We can take full development or work with your team!"
+      
+    - name : "Mobile and Web"
+      icon : "ti-package"
+      content : "Mobile and web design with the development of modern progressive application that focus on users and business."
+      
+    - name : "Chatbots"
+      icon : "ti-alarm-clock"
+      content : "Creating chatbots is trivial, our value comes from getting the most value of technology."
+      
+    - name : "Smart Analytics"
+      icon : "ti-credit-card"
+      content : "Governance, workflows, deployment, monitoring and decisions are some of the considerations to have on the era of AI."
+
+    - name : "Internet-of-Things"
+      icon : "ti-headphone-alt"
+      content : "Our focus is on getting data into public, private or hybrid clouds, and give all the meaning and value to your data."
+      
+    - name : "Cloud Support"
+      icon : "ti-cloud-up"
+      content : "To the cloud what belongs to the cloud and keep in house what makes sense."
+      
+    - name : "Modernization"
+      icon : "ti-cloud-up"
+      content : "We can help to re-eengineer your legacy systems, and build modern applications that can scale your business."
+
+    - name : "True-tech Experiences"
+      icon : "ti-cloud-up"
+      content : "Design and develop amazing experience on android TV, auto and wereables with the user experience your target deserves."
+
+    - name : "Cloud Support"
+      icon : "ti-cloud-up"
+      content : "To the cloud what belongs to the cloud and keep in house what makes sense."
+
+    - name : "Robotic Process Automation"
+      icon : "ti-cloud-up"
+      content : "To the cloud what belongs to the cloud and keep in house what makes sense."
+
+    - name : "Mainframe offload"
+      icon : "ti-cloud-up"
+      content : "Reduce the cost with mainframe by taking most of the workloads to Kubernetes."
+
+    - name : "Customer advisory"
+      icon : "ti-cloud-up"
+      content : "Make sure your venders and partners are taking you on the riht direction making sure you have the right vision of future."
+
+######################### Service #####################
+service:
+  enable : true
+  service_item:
+    # service item loop
+    - title : "We are experts on doing smart scalable analytics"
+      images:
+      - "images/analytics-1.jpg"
+      - "images/analytics-2.jpg"
+      - "images/analytics-3.jpg"
+      content : "We love cloud, challenges and innovation. Usually working closely with our customers to deliver the best possible solutions for their clients. Whatever the technology you are using, we can help you drive success."
+      button:
+        enable : true
+        label : "Check it out"
+        link : "#"
+        
+    # service item loop
+    - title : "It is a privately owned and 'intelligent' company"
+      images:
+      - "images/service-2.png"
+      content : "Whether your company is trying to increase productivity, revamp customer experiences, or make direct sales, most of the time AI is the answer, but AI has some best friends as the cloud (private, public or even hybrid) and IoT."
+      button:
+        enable : true
+        label : "Check it out"
+        link : "#"
+        
+    # service item loop
+    - title : "It’s a team of experienced and 'distributed' skills"
+      images:
+      - "images/distributed.jpg"
+      content : We can help onboard data, from the ground field up to consumer. using the right and economic solution that are available and we will. Hope you don’t mind we fight back and advise you on the best decisions."
+      button:
+        enable : true
+        label : "Check it out"
+        link : "#"
+        
+    # service item loop
+    - title : "A company standing different from others"
+      images:
+      - "images/service-3.png"
+      content : "We are experienced data lovers, allways interested on challenges to ingesting it in batch or realtime, we provide meaning and value to your data."
+      button:
+        enable : true
+        label : "Check it out"
+        link : "#"
+        
+################### Screenshot ########################
+screenshot:
+  enable : true
+  title : "Experience the best <br> workflow with us"
+  image : "images/screenshot.svg"
+
+  
+
+##################### Call to action #####################
+call_to_action:
+  enable : true
+  title : "Ready to get started?"
+  image : "images/cta.svg"
+  content : "Read more about what we do and our philosophy of design. Judge for yourself The work and results <br> we’ve achieved for other clients, and meet our highly experienced Team who just love to design."
+  button:
+    enable : true
+    label : "Contact Us"
+    link : "contact"
