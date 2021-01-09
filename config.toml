@@ -101,7 +101,7 @@ URL = "faq"
 logo = "images/logo.svg"
 logo_width = "80px"
 # Meta data
-description = "smart analytics intelligent innovation moderniation meanify iot cloud kubernetes"
+description = "EANIFY | All the meaning you can get from your data! (smart analytics intelligent innovation modernization iot cloud kubernetes web mobile)"
 author = "Meanify"
 # contact form action
 contact_form_action = "https://formspree.io/xeqkwooe" # contact form works with https://formspree.io
