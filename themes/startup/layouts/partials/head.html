@@ -21,8 +21,10 @@
   <link rel="icon" href="{{ `images/favicon.svg` | absURL }}" type="image/x-icon">
 
   
+  <meta property="og:image" content="{{ . | absURL }}" />
+
   {{ template "_internal/opengraph.html" . }}
-  {{ with .Params.Image }}
+  {{ with site.Params.Image }}
   <meta property="og:image" content="{{ . | absURL }}" />
   {{ end }}
   {{ template "_internal/google_analytics_async.html" . }}
