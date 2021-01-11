@@ -12,7 +12,7 @@ basic:
   info : "Why not hybrid (private + public)?"
   services:
   - "Managed services"
-  - "Your/our cloud"
+  - "Yours/Our cloud"
   - "Time-Critical"
   - "Business critical"
   - "Reduce cost"
