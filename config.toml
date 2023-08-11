@@ -11,7 +11,7 @@ summaryLength = "15"
 # disqus short name
 disqusShortname = "mfgaspar" # get your shortname form here : https://disqus.com
 # google analytics
-googleAnalytics = "UA-158955139-1"
+googleAnalytics = "G-RDQM9R4TNT"
 # unsafe html
 [markup.goldmark.renderer]
 unsafe = true
@@ -131,17 +131,7 @@ link = "contact"
 [[params.social]]
 title = "facebook"
 icon = "ti-facebook" # themify icon : https://themify.me/themify-icons
-link = "https://www.facebook.com/miguel.ferreira.gaspar"
-
-[[params.social]]
-title = "twitter"
-icon = "ti-twitter-alt" # themify icon : https://themify.me/themify-icons
-link = "https://twitter.com/migfgaspar"
-
-[[params.social]]
-title = "skype"
-icon = "ti-skype" # themify icon : https://themify.me/themify-icons
-link = "https://wa.me/00351962390920"
+link = "https://www.facebook.com/meanify"
 
 [[params.social]]
 title = "linkedin"
@@ -157,3 +147,8 @@ link = "https://github.com/meanify"
 #title = "instagram"
 #icon = "ti-instagram" #ionicon pack v2 : https://ionicons.com/v2/
 #link = "https://www.instagram.com/mfgaspar/"
+
+[[params.social]]
+title = "skype"
+icon = "ti-skype" # themify icon : https://themify.me/themify-icons
+link = "https://wa.me/00351962390920"
