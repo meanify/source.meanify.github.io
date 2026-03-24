@@ -105,7 +105,9 @@
   color: var(--color-text-heading);
 }
 
-[data-theme="light"] .contact__detail:hover {
+[data-theme="light"] .contact__detail:hover,
+[data-theme="light"] .contact__detail--phone:hover .contact__phone-number,
+[data-theme="light"] .contact__detail--phone:hover .contact__phone-disclaimer {
   color: var(--color-text-heading);
 }
 
@@ -845,6 +847,23 @@ textarea {
   color: var(--color-white);
 }
 
+.contact__detail--phone .contact__phone-block {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35em;
+}
+
+.contact__detail--phone .contact__phone-number {
+  color: inherit;
+  text-decoration: none;
+}
+
+.contact__detail--phone:hover .contact__phone-number,
+.contact__detail--phone:hover .contact__phone-disclaimer {
+  color: var(--color-white);
+}
+
 /* Form */
 .contact__form {
   background: var(--color-bg-card);
@@ -993,13 +1012,52 @@ textarea {
   background: var(--color-primary-hover);
 }
 
+/* Livro de Reclamações (above contact row) */
+.footer__livro {
+  margin: 0;
+  padding: 24px 0 0;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.875rem;
+}
+
+.footer__livro-link {
+  display: inline-block;
+  line-height: 0;
+  transition: opacity var(--transition);
+}
+
+.footer__livro-link:hover {
+  opacity: 0.88;
+}
+
+.footer__livro-logo {
+  height: 48px;
+  width: auto;
+  max-width: min(100%, 220px);
+  display: block;
+}
+
+.footer__phone a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.footer__phone a + span {
+  margin-left: 0.35em;
+}
+
+.footer__phone a:hover {
+  color: var(--color-primary);
+}
+
 /* Footer Contact Row */
 .footer__contact {
   display: flex;
   align-items: center;
   gap: 32px;
-  padding: 24px 0;
-  border-top: 1px solid var(--color-border);
+  padding: 16px 0 24px;
+  border-top: none;
   font-size: 0.875rem;
   color: var(--color-text-muted);
 }

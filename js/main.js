@@ -46,6 +46,15 @@
       }
     });
 
+    // Update all [data-i18n-alt] elements (e.g. localized image alt text)
+    document.querySelectorAll('[data-i18n-alt]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n-alt');
+      var value = resolve(strings, key);
+      if (value !== null) {
+        el.setAttribute('alt', value);
+      }
+    });
+
     // Update <html lang>
     document.documentElement.lang = lang;
 

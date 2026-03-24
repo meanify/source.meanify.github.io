@@ -93,7 +93,8 @@ const translations = {
       submit: "Submit Contact Request",
       sending: "Sending...",
       successMessage: "Thank you! Your message has been sent successfully.",
-      errorMessage: "Something went wrong. Please try again or email us at info@meanify.eu."
+      errorMessage: "Something went wrong. Please try again or email us at info@meanify.eu.",
+      phoneDisclaimer: "(Call to the national mobile network)"
     },
 
     // Footer
@@ -114,7 +115,8 @@ const translations = {
       emailPlaceholder: "Email address",
       copyright: "© 2026 MEANIFY INC. ALL RIGHTS RESERVED",
       privacy: "Privacy",
-      terms: "Terms"
+      terms: "Terms",
+      livroReclamacoes: "Electronic complaints book (Livro de Reclamações)"
     },
 
     // Privacy Policy
@@ -243,7 +245,8 @@ const translations = {
       submit: "Enviar Pedido de Contacto",
       sending: "A enviar...",
       successMessage: "Obrigado! A sua mensagem foi enviada com sucesso.",
-      errorMessage: "Algo correu mal. Por favor tente novamente ou envie email para info@meanify.eu."
+      errorMessage: "Algo correu mal. Por favor tente novamente ou envie email para info@meanify.eu.",
+      phoneDisclaimer: "(Chamada para a rede móvel nacional)"
     },
 
     // Footer
@@ -264,7 +267,8 @@ const translations = {
       emailPlaceholder: "Endereço de email",
       copyright: "© 2026 MEANIFY INC. TODOS OS DIREITOS RESERVADOS",
       privacy: "Privacidade",
-      terms: "Termos"
+      terms: "Termos",
+      livroReclamacoes: "Livro de reclamações eletrónico"
     },
 
     // Política de Privacidade
