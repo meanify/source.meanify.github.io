@@ -14,7 +14,6 @@ export default {
     themeToggle: "Toggle light/dark theme",
     menuToggle: "Toggle menu",
     phoneDisclaimer: "(Call to the national mobile network)",
-    whatsappFab: "Chat with Meanify on WhatsApp",
     breadcrumbHome: "Home",
   },
 

@@ -1,4 +1,3 @@
-{% from "partials/icons.njk" import icon %}
 <!DOCTYPE html>
 <html lang="{{ site.hreflang[lang] }}">
 <head>
@@ -14,10 +13,6 @@
   </main>
 
   {% include "partials/footer.njk" %}
-
-  <a href="{{ waUrl }}" class="whatsapp-fab" target="_blank" rel="noopener noreferrer" aria-label="{{ t.common.whatsappFab }}" data-lead="whatsapp" data-cta="fab">
-    {{ icon("whatsapp", 28) }}
-  </a>
 
   {% include "partials/consent.njk" %}
 

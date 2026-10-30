@@ -14,7 +14,6 @@ export default {
     themeToggle: "Alternar tema claro/escuro",
     menuToggle: "Abrir/fechar menu",
     phoneDisclaimer: "(Chamada para a rede móvel nacional)",
-    whatsappFab: "Fale com a Meanify no WhatsApp",
     breadcrumbHome: "Início",
   },
 

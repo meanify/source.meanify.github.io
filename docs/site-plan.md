@@ -116,7 +116,7 @@ Shows the existing channels, **unchanged**: phone +351 962 390 920 (with the "na
 The contact form is removed. The **footer newsletter form uses the same Formspree endpoint**, so I propose removing it too (see open questions).
 
 Ways to turn visitors into leads:
-1. **WhatsApp as the main CTA:** `wa.me/351962390920?text=…` with a message prefilled for each page and language (for example "Hi Meanify, I'm interested in Multi-Agent Systems…"). The WhatsApp floating button stays, with page-aware text.
+1. **WhatsApp as the main CTA:** `wa.me/351962390920?text=…` with a message prefilled for each page and language (for example "Hi Meanify, I'm interested in Multi-Agent Systems…").
 2. **Prefilled mailto:** `mailto:info@meanify.eu?subject=…&body=…` with a short brief template (company, what you want to build, timeline).
 3. **Click-to-call** on mobile.
 4. **Optional booking link** (Google Calendar appointment schedule or Cal.com) for a free 30-minute call. It doesn't need a form on our site and qualifies leads well.
