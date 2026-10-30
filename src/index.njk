@@ -1,0 +1,48 @@
+---
+permalink: /index.html
+eleventyExcludeFromCollections: true
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meanify | AI Systems, Automation &amp; Data Architecture</title>
+  <meta name="description" content="Meanify builds AI systems, automation and data architectures. Choose your language. / Escolha o seu idioma.">
+  <meta name="robots" content="noindex, follow">
+  {% for l in site.langs %}
+  <link rel="alternate" hreflang="{{ site.hreflang[l] }}" href="{{ site.pages.home[l] | absUrl(site.url) }}">
+  {% endfor %}
+  <link rel="alternate" hreflang="x-default" href="{{ site.url }}/">
+  <link rel="icon" type="image/svg+xml" href="/logos/meanify-logo.svg">
+  <script>
+    // Send visitors to their language: saved choice first, then browser settings.
+    (function () {
+      var lang = null;
+      try { lang = localStorage.getItem('meanify-lang'); } catch (e) {}
+      if (lang !== 'en' && lang !== 'pt') {
+        var prefs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ''];
+        lang = 'en';
+        for (var i = 0; i < prefs.length; i++) {
+          var p = String(prefs[i]).toLowerCase();
+          if (p.indexOf('pt') === 0) { lang = 'pt'; break; }
+          if (p.indexOf('en') === 0) { break; }
+        }
+      }
+      location.replace((lang === 'pt' ? '{{ site.pages.home.pt }}' : '{{ site.pages.home.en }}') + location.search + location.hash);
+    })();
+  </script>
+  <style>
+    body { font-family: system-ui, sans-serif; background: #0a0a0a; color: #e5e5e5; display: grid; place-items: center; min-height: 100vh; margin: 0; }
+    a { color: #e06a4e; margin: 0 12px; font-size: 1.125rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <p>
+      <a href="{{ site.pages.home.en }}" hreflang="en" lang="en">English</a>
+      <a href="{{ site.pages.home.pt }}" hreflang="pt-PT" lang="pt-PT">Português</a>
+    </p>
+  </main>
+</body>
+</html>

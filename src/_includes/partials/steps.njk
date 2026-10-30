@@ -1,0 +1,12 @@
+{% from "partials/icons.njk" import icon %}
+{# Expects: steps = [{ title, text, human }], humanLabel #}
+<ol class="steps">
+  {% for s in steps %}
+  <li class="step">
+    <span class="step__num" aria-hidden="true">{{ loop.index }}</span>
+    <h3 class="step__title">{{ s.title }}</h3>
+    <p class="step__text">{{ s.text }}</p>
+    {% if s.human %}<p class="step__human">{{ icon("user", 16) }} <span><span class="visually-hidden">{{ humanLabel }}: </span>{{ s.human }}</span></p>{% endif %}
+  </li>
+  {% endfor %}
+</ol>

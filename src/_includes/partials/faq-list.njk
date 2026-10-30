@@ -1,0 +1,9 @@
+{# Expects: items = [{ q, a, id? }] #}
+<div class="faq">
+  {% for f in items %}
+  <details class="faq__item"{% if f.id %} id="{{ f.id }}"{% endif %}>
+    <summary class="faq__q"><h3>{{ f.q }}</h3></summary>
+    <p class="faq__a">{{ f.a }}</p>
+  </details>
+  {% endfor %}
+</div>

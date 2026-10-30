@@ -1,0 +1,52 @@
+---
+layout: layouts/base.njk
+---
+{% set ti = t.insights %}
+<article class="article">
+  <header class="page-hero page-hero--article">
+    <div class="container container--narrow">
+      {% include "partials/breadcrumb.njk" %}
+      <p class="section-label">{{ ti.label }}</p>
+      <h1 class="page-hero__title">{{ article.title }}</h1>
+      <p class="page-hero__lead">{{ article.description }}</p>
+      <p class="article__meta">
+        <span>{{ ti.by }} Meanify</span>
+        <span>{{ ti.published }} <time datetime="{{ article.date }}">{{ article.date | longDate(lang) }}</time></span>
+        {% if article.updated != article.date %}<span>{{ t.legal.updatedLabel }}: <time datetime="{{ article.updated }}">{{ article.updated | longDate(lang) }}</time></span>{% endif %}
+        <span>{{ ti.minRead | replace("{n}", article.readingMinutes) }}</span>
+      </p>
+    </div>
+    <div class="hero__gradient-bg" aria-hidden="true"></div>
+  </header>
+
+  <div class="section">
+    <div class="container container--narrow prose prose--article">
+      {{ content | safe }}
+    </div>
+  </div>
+
+  {% if faqItems.length %}
+  <section class="section section--alt" aria-labelledby="articleFaqTitle">
+    <div class="container container--narrow">
+      <h2 class="section__title" id="articleFaqTitle">{{ t.servicePage.faqTitle }}</h2>
+      {% set items = faqItems %}
+      {% include "partials/faq-list.njk" %}
+    </div>
+  </section>
+  {% endif %}
+</article>
+
+{% if relatedArticles.length %}
+<section class="section" aria-labelledby="relatedArticlesTitle">
+  <div class="container">
+    <h2 class="section__title" id="relatedArticlesTitle">{{ ti.relatedTitle }}</h2>
+    <ul class="grid grid--2">
+      {% for a in relatedArticles %}{% include "partials/article-card.njk" %}{% endfor %}
+    </ul>
+  </div>
+</section>
+{% endif %}
+
+{% include "partials/checklist-teaser.njk" %}
+
+{% include "partials/cta-band.njk" %}

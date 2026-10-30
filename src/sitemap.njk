@@ -1,0 +1,29 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+{%- for key, urls in site.pages %}
+{%- for lang in site.langs %}
+  <url>
+    <loc>{{ urls[lang] | absUrl(site.url) }}</loc>
+    <lastmod>{{ site.contentUpdated }}</lastmod>
+    {%- for alt in site.langs %}
+    <xhtml:link rel="alternate" hreflang="{{ site.hreflang[alt] }}" href="{{ urls[alt] | absUrl(site.url) }}"/>
+    {%- endfor %}
+    <xhtml:link rel="alternate" hreflang="x-default" href="{{ site.url }}/"/>
+  </url>
+{%- endfor %}
+{%- endfor %}
+{%- for a in articles %}
+  <url>
+    <loc>{{ a.url | absUrl(site.url) }}</loc>
+    <lastmod>{{ a.updated }}</lastmod>
+    {%- for l, url in a.alternates %}
+    <xhtml:link rel="alternate" hreflang="{{ site.hreflang[l] }}" href="{{ url | absUrl(site.url) }}"/>
+    {%- endfor %}
+  </url>
+{%- endfor %}
+</urlset>

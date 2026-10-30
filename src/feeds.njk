@@ -1,0 +1,32 @@
+---
+pagination:
+  data: site.langs
+  size: 1
+  alias: lang
+permalink: "{{ site.pages.insights[lang] }}feed.xml"
+eleventyExcludeFromCollections: true
+---
+{%- set t = i18n[lang] -%}
+{%- set feedUrl = (site.pages.insights[lang] + "feed.xml") | absUrl(site.url) -%}
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ site.hreflang[lang] }}">
+  <title>Meanify · {{ t.insights.label }}</title>
+  <subtitle>{{ t.insights.lead }}</subtitle>
+  <link href="{{ feedUrl }}" rel="self"/>
+  <link href="{{ site.pages.insights[lang] | absUrl(site.url) }}"/>
+  <id>{{ feedUrl }}</id>
+  <author><name>Meanify</name><email>{{ site.contact.email }}</email></author>
+  {%- set ns = { updated: site.contentUpdated } %}
+  {%- for a in articles %}{% if a.lang == lang and a.updated > ns.updated %}{% set ns = { updated: a.updated } %}{% endif %}{% endfor %}
+  <updated>{{ ns.updated }}T00:00:00Z</updated>
+  {%- for a in articles %}{% if a.lang == lang %}
+  <entry>
+    <title>{{ a.title }}</title>
+    <link href="{{ a.url | absUrl(site.url) }}"/>
+    <id>{{ a.url | absUrl(site.url) }}</id>
+    <published>{{ a.date }}T00:00:00Z</published>
+    <updated>{{ a.updated }}T00:00:00Z</updated>
+    <summary>{{ a.description }}</summary>
+  </entry>
+  {%- endif %}{% endfor %}
+</feed>

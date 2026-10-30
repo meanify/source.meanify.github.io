@@ -1,0 +1,55 @@
+---
+permalink: /llms.txt
+eleventyExcludeFromCollections: true
+---
+{%- set en = i18n.en -%}
+{%- set pt = i18n.pt -%}
+{%- set u = site.url -%}
+# Meanify
+
+> {{ en.faqPage.groups[0].items[0].a }}
+
+- Location: {{ site.contact.address.display }}
+- Languages: English, Portuguese (pt-PT)
+- Email: {{ site.contact.email }}
+- Phone and WhatsApp: {{ site.contact.phone }}
+- Area served: Portugal and the European Union
+
+How Meanify works: {{ en.processPage.lead }}
+
+## Services
+
+{% for key in site.services -%}
+- [{{ en.services[key].name }}]({{ u }}{{ site.pages[key].en }}): {{ en.services[key].short }}
+{% endfor %}
+## Company
+
+- [How we work]({{ u }}{{ site.pages.process.en }}): {{ en.meta.process.description }}
+- [About]({{ u }}{{ site.pages.about.en }}): {{ en.meta.about.description }}
+- [FAQ]({{ u }}{{ site.pages.faq.en }}): {{ en.meta.faq.description }}
+- [Contact]({{ u }}{{ site.pages.contact.en }}): {{ en.meta.contact.description }}
+- [AI readiness checklist]({{ u }}{{ site.pages.checklist.en }}): {{ en.meta.checklist.description }}
+
+## Insights
+
+{% for a in articles %}{% if a.lang == "en" -%}
+- [{{ a.title }}]({{ u }}{{ a.url }}): {{ a.description }}
+{% endif %}{% endfor %}
+## Português
+
+- [Início]({{ u }}{{ site.pages.home.pt }}): {{ pt.meta.home.description }}
+{% for key in site.services -%}
+- [{{ pt.services[key].name }}]({{ u }}{{ site.pages[key].pt }}): {{ pt.services[key].short }}
+{% endfor -%}
+- [Como trabalhamos]({{ u }}{{ site.pages.process.pt }})
+- [Perguntas frequentes]({{ u }}{{ site.pages.faq.pt }})
+- [Contacto]({{ u }}{{ site.pages.contact.pt }})
+- [Checklist de preparação para IA]({{ u }}{{ site.pages.checklist.pt }})
+{% for a in articles %}{% if a.lang == "pt" -%}
+- [{{ a.title }}]({{ u }}{{ a.url }})
+{% endif %}{% endfor %}
+## Optional
+
+- [Full text of this site for AI assistants]({{ u }}/llms-full.txt)
+- [Privacy Policy]({{ u }}{{ site.pages.privacy.en }})
+- [Sitemap]({{ u }}/sitemap.xml)

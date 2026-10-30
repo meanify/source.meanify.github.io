@@ -1,0 +1,98 @@
+{% from "partials/icons.njk" import icon %}
+{% from "partials/service-card.njk" import serviceCard %}
+{% set sp = t.servicePage %}
+
+<section class="page-hero">
+  <div class="container">
+    {% include "partials/breadcrumb.njk" %}
+    <p class="section-label">{{ svc.tagline }}</p>
+    <h1 class="page-hero__title">{{ svc.name }}</h1>
+    <p class="page-hero__lead">{{ svc.lead }}</p>
+    <p class="page-hero__updated">{{ t.legal.updatedLabel }}: <time datetime="{{ site.contentUpdated }}">{{ site.contentUpdated | longDate(lang) }}</time></p>
+    <div class="hero__ctas">
+      <a href="{{ waUrl }}" class="btn btn--primary btn--icon" target="_blank" rel="noopener noreferrer" data-lead="whatsapp" data-cta="service-hero" data-service="{{ pageKey }}">{{ icon("whatsapp", 18) }} {{ t.nav.cta }}</a>
+      <a href="{{ mailUrl }}" class="btn btn--secondary" data-lead="email" data-cta="service-hero" data-service="{{ pageKey }}">{{ t.ctaBand.email }}</a>
+    </div>
+  </div>
+  <div class="hero__gradient-bg" aria-hidden="true"></div>
+</section>
+
+<section class="section section--alt" aria-label="{{ sp.whoTitle }} / {{ sp.problemsTitle }}">
+  <div class="container grid grid--2">
+    <div class="card">
+      <h2 class="card__heading">{{ sp.whoTitle }}</h2>
+      <ul class="checklist">
+        {% for item in svc.who %}<li>{{ icon("check", 16) }} {{ item }}</li>{% endfor %}
+      </ul>
+    </div>
+    <div class="card">
+      <h2 class="card__heading">{{ sp.problemsTitle }}</h2>
+      <ul class="checklist checklist--problems">
+        {% for item in svc.problems %}<li>{{ icon("check", 16) }} {{ item }}</li>{% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="includedTitle">
+  <div class="container">
+    <header class="section__header">
+      <h2 class="section__title" id="includedTitle">{{ sp.includedTitle }}</h2>
+    </header>
+    <ul class="grid grid--3">
+      {% for item in svc.included %}
+      <li class="card">
+        <h3 class="card__title">{{ item.title }}</h3>
+        <p class="card__text">{{ item.text }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section section--alt" aria-labelledby="stepsTitle">
+  <div class="container">
+    <header class="section__header">
+      <h2 class="section__title" id="stepsTitle">{{ sp.stepsTitle }}</h2>
+    </header>
+    {% set steps = svc.steps %}
+    {% set humanLabel = sp.humanLabel %}
+    {% include "partials/steps.njk" %}
+  </div>
+</section>
+
+<section class="section" aria-labelledby="techTitle">
+  <div class="container">
+    <header class="section__header">
+      <h2 class="section__title" id="techTitle">{{ sp.techTitle }}</h2>
+    </header>
+    <ul class="tags">
+      {% for item in svc.tech %}<li class="tag">{{ item }}</li>{% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section section--alt" aria-labelledby="svcFaqTitle">
+  <div class="container container--narrow">
+    <header class="section__header">
+      <h2 class="section__title" id="svcFaqTitle">{{ sp.faqTitle }}</h2>
+    </header>
+    {% set items = faqItems %}
+    {% include "partials/faq-list.njk" %}
+  </div>
+</section>
+
+<section class="section" aria-labelledby="relatedTitle">
+  <div class="container">
+    <header class="section__header">
+      <h2 class="section__title" id="relatedTitle">{{ sp.relatedTitle }}</h2>
+    </header>
+    <ul class="svc-grid svc-grid--2">
+      {% for key in svc.related %}
+      {{ serviceCard(t.services[key], site.pages[key][lang], sp.learnMore) }}
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+{% include "partials/cta-band.njk" %}

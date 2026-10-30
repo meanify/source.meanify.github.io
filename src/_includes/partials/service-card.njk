@@ -1,0 +1,16 @@
+{% from "partials/icons.njk" import icon %}
+{# Macros don't see the page context, so pass what they need. #}
+{% macro serviceCard(s, url, learnMore, badge="") %}
+<li class="svc-card{% if badge %} svc-card--featured{% endif %}">
+  <a href="{{ url }}" class="svc-card__link">
+    <span class="svc-card__top">
+      <span class="svc-card__icon">{{ icon(s.icon, 28) }}</span>
+      {% if badge %}<span class="svc-card__badge">{{ badge }}</span>{% endif %}
+    </span>
+    <span class="svc-card__tagline">{{ s.tagline }}</span>
+    <h3 class="svc-card__title">{{ s.name }}</h3>
+    <p class="svc-card__text">{{ s.short }}</p>
+    <span class="svc-card__more">{{ learnMore }} →</span>
+  </a>
+</li>
+{% endmacro %}

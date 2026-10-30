@@ -1,0 +1,50 @@
+---
+pageKey: about
+---
+{% set a = t.aboutPage %}
+{% set hero = { label: a.label, title: a.title, lead: a.lead } %}
+{% include "partials/page-hero.njk" %}
+
+<section class="section" aria-labelledby="storyTitle">
+  <div class="container container--narrow prose">
+    <h2 class="section__title" id="storyTitle">{{ a.storyTitle }}</h2>
+    {% for para in a.story %}<p>{{ para }}</p>{% endfor %}
+  </div>
+</section>
+
+<section class="section section--alt" aria-labelledby="valuesTitle">
+  <div class="container">
+    <header class="section__header">
+      <h2 class="section__title" id="valuesTitle">{{ a.valuesTitle }}</h2>
+    </header>
+    <ul class="grid grid--2">
+      {% for v in a.values %}
+      <li class="card">
+        <h3 class="card__title">{{ v.title }}</h3>
+        <p class="card__text">{{ v.text }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="locationTitle">
+  <div class="container grid grid--2">
+    <div class="prose">
+      <h2 class="section__title" id="locationTitle">{{ a.locationTitle }}</h2>
+      <p>{{ a.locationText }}</p>
+    </div>
+    <div class="card">
+      <h2 class="card__heading">{{ a.detailsTitle }}</h2>
+      <dl class="details">
+        <dt>{{ a.details.name }}</dt><dd>{{ site.name }}</dd>
+        <dt>{{ a.details.address }}</dt><dd>{{ site.contact.address.display }}</dd>
+        <dt>{{ a.details.email }}</dt><dd><a href="{{ mailUrl }}" data-lead="email" data-cta="about">{{ site.contact.email }}</a></dd>
+        <dt>{{ a.details.phone }}</dt><dd><a href="{{ site.contact.phoneHref }}" data-lead="phone" data-cta="about">{{ site.contact.phone }}</a> <small>{{ t.common.phoneDisclaimer }}</small></dd>
+        <dt>{{ a.details.languages }}</dt><dd>{{ a.details.languagesValue }}</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+{% include "partials/cta-band.njk" %}

@@ -1,0 +1,51 @@
+---
+pageKey: checklist
+---
+{% from "partials/icons.njk" import icon %}
+{% set c = t.checklist %}
+{% set hero = { label: c.label, title: c.title, lead: c.lead } %}
+{% include "partials/page-hero.njk" %}
+
+{% set total = c.sections | countItems %}
+
+<section class="section">
+  <div class="container checklist-layout">
+    <form class="readiness" id="readiness" data-total="{{ total }}" onsubmit="return false">
+      {% for s in c.sections %}
+      <fieldset class="readiness__group">
+        <legend class="readiness__title"><span aria-hidden="true">{{ loop.index }}.</span> {{ s.title }}</legend>
+        {% for item in s.items %}
+        <label class="readiness__item">
+          <input type="checkbox" class="readiness__check">
+          <span class="readiness__box" aria-hidden="true">{{ icon("check", 14) }}</span>
+          <span>{{ item }}</span>
+        </label>
+        {% endfor %}
+      </fieldset>
+      {% endfor %}
+    </form>
+
+    <aside class="readiness__result card" aria-live="polite">
+      <p class="readiness__score-label">{{ c.scoreLabel }}</p>
+      <p class="readiness__score"><span id="readinessScore">0</span><span class="readiness__total">/{{ total }}</span></p>
+      <div class="readiness__meter" aria-hidden="true"><span id="readinessMeter"></span></div>
+      <h2 class="card__heading">{{ c.resultTitle }}</h2>
+      <ul class="readiness__levels">
+        {% for r in c.results %}
+        <li class="readiness__level" data-min="{{ r.min }}">
+          <h3 class="card__title">{{ r.title }}</h3>
+          <p class="card__text">{{ r.text }}</p>
+        </li>
+        {% endfor %}
+      </ul>
+      <div class="readiness__cta">
+        <p class="card__title">{{ c.ctaTitle }}</p>
+        <p class="card__text">{{ c.ctaText }}</p>
+        <a href="{{ waUrl }}" id="readinessWhatsapp" class="btn btn--primary btn--icon btn--full" target="_blank" rel="noopener noreferrer" data-lead="whatsapp" data-cta="checklist" data-template="{{ c.whatsappText }}" data-phone="{{ site.contact.whatsapp }}">{{ icon("whatsapp", 18) }} {{ c.ctaButton }}</a>
+        <button type="button" class="btn btn--secondary btn--full" id="readinessPrint">{{ c.printCta }}</button>
+      </div>
+    </aside>
+  </div>
+</section>
+
+{% include "partials/cta-band.njk" %}

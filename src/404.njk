@@ -1,0 +1,37 @@
+---
+permalink: /404.html
+eleventyExcludeFromCollections: true
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 | Meanify</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/svg+xml" href="/logos/meanify-logo.svg">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script>
+    (function(){
+      try { var t = localStorage.getItem('meanify-theme'); if (t === 'light') { document.documentElement.setAttribute('data-theme','light'); } else if (!t && window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) { document.documentElement.setAttribute('data-theme','light'); } } catch(e){}
+    })();
+  </script>
+</head>
+<body>
+  <main class="not-found">
+    <a href="/" class="navbar__logo" aria-label="Meanify">
+      <img src="/logos/meanify-logo.svg" alt="" width="56" height="53">
+      <span class="navbar__brand">Meanify</span>
+    </a>
+    <p class="not-found__code" aria-hidden="true">404</p>
+    {% for l in site.langs %}
+    {% set nf = i18n[l].notFound %}
+    <section class="not-found__lang" lang="{{ site.hreflang[l] }}">
+      <h1 class="not-found__title">{{ nf.title }}</h1>
+      <p>{{ nf.text }}</p>
+      <a href="{{ site.pages.home[l] }}" class="btn {% if loop.first %}btn--primary{% else %}btn--secondary{% endif %}">{{ nf.cta }}</a>
+    </section>
+    {% endfor %}
+  </main>
+</body>
+</html>

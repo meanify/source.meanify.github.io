@@ -1,0 +1,119 @@
+---
+pageKey: home
+---
+{% from "partials/icons.njk" import icon %}
+{% from "partials/service-card.njk" import serviceCard %}
+{% set h = t.home %}
+
+<section class="hero" id="hero">
+  <div class="hero__container">
+    <div class="hero__label animate-on-scroll">
+      <span class="hero__label-line" aria-hidden="true"></span>
+      <span>{{ h.hero.label }}</span>
+    </div>
+    <h1 class="hero__title animate-on-scroll">{{ h.hero.title }}</h1>
+    <p class="hero__subheadline animate-on-scroll">{{ h.hero.subtitle }}</p>
+    <div class="hero__ctas animate-on-scroll">
+      <a href="{{ waUrl }}" class="btn btn--primary btn--icon" target="_blank" rel="noopener noreferrer" data-lead="whatsapp" data-cta="hero">{{ icon("whatsapp", 18) }} {{ h.hero.ctaPrimary }}</a>
+      <a href="{{ site.pages.process[lang] }}" class="btn btn--secondary" data-cta="hero">{{ h.hero.ctaSecondary }}</a>
+    </div>
+    <ul class="trust animate-on-scroll">
+      {% for item in h.trust %}<li>{{ icon("check", 16) }} {{ item }}</li>{% endfor %}
+    </ul>
+  </div>
+  <div class="hero__gradient-bg" aria-hidden="true"></div>
+</section>
+
+<section class="section section--alt" id="why" aria-labelledby="problemTitle">
+  <div class="container">
+    <header class="section__header animate-on-scroll">
+      <p class="section-label">{{ h.problem.label }}</p>
+      <h2 class="section__title" id="problemTitle">{{ h.problem.title }}</h2>
+    </header>
+    <ul class="grid grid--3">
+      {% for item in h.problem.items %}
+      <li class="card animate-on-scroll{% if loop.last %} card--accent{% endif %}">
+        <h3 class="card__title">{{ item.title }}</h3>
+        <p class="card__text">{{ item.text }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="services" aria-labelledby="servicesTitle">
+  <div class="container">
+    <header class="section__header animate-on-scroll">
+      <p class="section-label">{{ h.services.label }}</p>
+      <h2 class="section__title" id="servicesTitle">{{ h.services.title }}</h2>
+      <p class="section__intro">{{ h.services.intro }}</p>
+    </header>
+    <ul class="svc-grid">
+      {% for key in site.services %}
+      {{ serviceCard(t.services[key], site.pages[key][lang], t.servicePage.learnMore, h.services.featured if loop.first else "") }}
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section section--alt" id="process" aria-labelledby="processTitle">
+  <div class="container">
+    <header class="section__header animate-on-scroll">
+      <p class="section-label">{{ h.process.label }}</p>
+      <h2 class="section__title" id="processTitle">{{ h.process.title }}</h2>
+      <p class="section__intro">{{ h.process.intro }}</p>
+    </header>
+    {% set steps = t.processPage.steps %}
+    {% set humanLabel = t.servicePage.humanLabel %}
+    {% include "partials/steps.njk" %}
+    <p class="section__more"><a href="{{ site.pages.process[lang] }}" class="btn btn--secondary">{{ h.process.cta }}</a></p>
+  </div>
+</section>
+
+<section class="section" id="benefits" aria-labelledby="whyTitle">
+  <div class="container">
+    <header class="section__header animate-on-scroll">
+      <p class="section-label">{{ h.why.label }}</p>
+      <h2 class="section__title" id="whyTitle">{{ h.why.title }}</h2>
+    </header>
+    <ul class="grid grid--3">
+      {% for item in h.why.items %}
+      <li class="card animate-on-scroll">
+        <span class="card__num" aria-hidden="true">0{{ loop.index }}</span>
+        <h3 class="card__title">{{ item.title }}</h3>
+        <p class="card__text">{{ item.text }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+{% include "partials/checklist-teaser.njk" %}
+
+<section class="section section--alt" id="faq" aria-labelledby="faqTitle">
+  <div class="container container--narrow">
+    <header class="section__header animate-on-scroll">
+      <p class="section-label">{{ h.faq.label }}</p>
+      <h2 class="section__title" id="faqTitle">{{ h.faq.title }}</h2>
+    </header>
+    {% set items = faqItems %}
+    {% include "partials/faq-list.njk" %}
+    <p class="section__more"><a href="{{ site.pages.faq[lang] }}" class="btn btn--secondary">{{ h.faq.cta }}</a></p>
+  </div>
+</section>
+
+<section class="contact" id="contact" aria-labelledby="contactTitle">
+  <div class="contact__container">
+    <div class="contact__info animate-on-scroll">
+      <p class="section-label">{{ t.contactPage.label }}</p>
+      <h2 class="contact__title" id="contactTitle">{{ t.ctaBand.title }}</h2>
+      <p class="contact__subtitle">{{ t.contactPage.lead }}</p>
+      <p class="contact__address">
+        {{ icon("pin") }}
+        <span><strong>{{ t.channels.addressTitle }}:</strong> {{ site.contact.address.display }}</span>
+      </p>
+    </div>
+    {% set ctaLocation = "contact" %}
+    <div class="animate-on-scroll">{% include "partials/channels.njk" %}</div>
+  </div>
+</section>

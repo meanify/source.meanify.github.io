@@ -1,0 +1,11 @@
+{% from "partials/icons.njk" import icon %}
+<section class="teaser" aria-labelledby="teaserTitle">
+  <div class="container teaser__inner">
+    <span class="teaser__icon">{{ icon("check", 28) }}</span>
+    <div class="teaser__text">
+      <h2 class="teaser__title" id="teaserTitle">{{ t.checklist.teaserTitle }}</h2>
+      <p>{{ t.checklist.teaserText }}</p>
+    </div>
+    <a href="{{ site.pages.checklist[lang] }}" class="btn btn--primary" data-cta="checklist-teaser">{{ t.checklist.teaserCta }} →</a>
+  </div>
+</section>

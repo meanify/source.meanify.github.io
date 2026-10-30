@@ -1,0 +1,111 @@
+---
+permalink: /llms-full.txt
+eleventyExcludeFromCollections: true
+---
+{%- set u = site.url -%}
+# Meanify — full site content
+
+This file contains the main content of www.meanify.eu in English and Portuguese, for AI assistants and search engines. Last updated: {{ site.contentUpdated }}.
+{% for lang in site.langs %}
+{%- set t = i18n[lang] %}
+
+---
+
+# {{ t.langName }}
+
+## {{ t.home.hero.title }}
+
+{{ t.home.hero.subtitle }}
+
+Source: {{ u }}{{ site.pages.home[lang] }}
+
+Contact: {{ site.contact.email }} · {{ site.contact.phone }} (WhatsApp) · {{ site.contact.address.display }}
+
+{% for key in site.services %}
+{%- set s = t.services[key] %}
+## {{ s.name }}
+
+Source: {{ u }}{{ site.pages[key][lang] }}
+
+{{ s.lead }}
+
+### {{ t.servicePage.whoTitle }}
+{% for i in s.who %}
+- {{ i }}
+{%- endfor %}
+
+### {{ t.servicePage.problemsTitle }}
+{% for i in s.problems %}
+- {{ i }}
+{%- endfor %}
+
+### {{ t.servicePage.includedTitle }}
+{% for i in s.included %}
+- {{ i.title }}: {{ i.text }}
+{%- endfor %}
+
+### {{ t.servicePage.stepsTitle }}
+{% for i in s.steps %}
+{{ loop.index }}. {{ i.title }}: {{ i.text }} ({{ t.servicePage.humanLabel }}: {{ i.human }})
+{%- endfor %}
+
+### {{ t.servicePage.techTitle }}
+
+{{ s.tech | join(", ") }}
+
+### {{ t.servicePage.faqTitle }}
+{% for f in s.faqs %}
+**{{ f.q }}**
+{{ f.a }}
+{% endfor %}
+{% endfor %}
+{%- set p = t.processPage %}
+## {{ p.title }}
+
+Source: {{ u }}{{ site.pages.process[lang] }}
+
+{{ p.lead }}
+{% for i in p.steps %}
+{{ loop.index }}. {{ i.title }}: {{ i.text }} ({{ t.servicePage.humanLabel }}: {{ i.human }})
+{%- endfor %}
+
+### {{ p.splitTitle }}
+{% for r in p.split %}
+- {{ p.splitAi }}: {{ r.ai }} — {{ p.splitHuman }}: {{ r.human }}
+{%- endfor %}
+
+### {{ p.fdeTitle }}
+
+{{ p.fdeText }}
+
+### {{ p.trustTitle }}
+{% for i in p.trust %}
+- {{ i.title }}: {{ i.text }}
+{%- endfor %}
+
+{% set a = t.aboutPage %}
+## {{ a.title }}
+
+Source: {{ u }}{{ site.pages.about[lang] }}
+
+{{ a.lead }}
+{% for para in a.story %}
+{{ para }}
+{% endfor %}
+{%- for v in a.values %}
+- {{ v.title }}: {{ v.text }}
+{%- endfor %}
+
+{{ a.locationText }}
+
+## {{ t.faqPage.title }}
+
+Source: {{ u }}{{ site.pages.faq[lang] }}
+{% for g in t.faqPage.groups %}
+### {{ g.title }}
+{% for f in g.items %}
+**{{ f.q }}**
+{{ f.a }}
+{% endfor %}
+{%- endfor %}
+{%- endfor %}

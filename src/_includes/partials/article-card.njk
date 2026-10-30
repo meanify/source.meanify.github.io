@@ -1,0 +1,9 @@
+{# Expects: a (article record), lang, t #}
+<li class="article-card">
+  <a href="{{ a.url }}" class="article-card__link">
+    <span class="article-card__meta"><time datetime="{{ a.date }}">{{ a.date | longDate(lang) }}</time> · {{ t.insights.minRead | replace("{n}", a.readingMinutes) }}</span>
+    <h3 class="article-card__title">{{ a.title }}</h3>
+    <p class="article-card__text">{{ a.description }}</p>
+    <span class="svc-card__more">{{ t.insights.readMore }} →</span>
+  </a>
+</li>

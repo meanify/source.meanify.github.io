@@ -1,0 +1,19 @@
+---
+pageKey: insights
+---
+{% set hero = { label: t.insights.label, title: t.insights.title, lead: t.insights.lead } %}
+{% include "partials/page-hero.njk" %}
+
+<section class="section" aria-labelledby="articlesTitle">
+  <div class="container">
+    <h2 class="visually-hidden" id="articlesTitle">{{ t.insights.label }}</h2>
+    <ul class="grid grid--2">
+      {% for a in articles %}{% if a.lang == lang %}{% include "partials/article-card.njk" %}{% endif %}{% endfor %}
+    </ul>
+    <p class="section__more"><a href="{{ site.pages.insights[lang] }}feed.xml" class="btn btn--secondary">{{ t.insights.feed }}</a></p>
+  </div>
+</section>
+
+{% include "partials/checklist-teaser.njk" %}
+
+{% include "partials/cta-band.njk" %}

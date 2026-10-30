@@ -1,0 +1,26 @@
+{% from "partials/icons.njk" import icon %}
+<!DOCTYPE html>
+<html lang="{{ site.hreflang[lang] }}">
+<head>
+  {% include "partials/head.njk" %}
+</head>
+<body data-lang="{{ lang }}"{% if svc %} data-service="{{ pageKey }}"{% endif %}>
+  <a class="skip-link" href="#main">{{ t.common.skipLink }}</a>
+
+  {% include "partials/header.njk" %}
+
+  <main id="main">
+    {{ content | safe }}
+  </main>
+
+  {% include "partials/footer.njk" %}
+
+  <a href="{{ waUrl }}" class="whatsapp-fab" target="_blank" rel="noopener noreferrer" aria-label="{{ t.common.whatsappFab }}" data-lead="whatsapp" data-cta="fab">
+    {{ icon("whatsapp", 28) }}
+  </a>
+
+  {% include "partials/consent.njk" %}
+
+  <script src="/js/main.js" defer></script>
+</body>
+</html>

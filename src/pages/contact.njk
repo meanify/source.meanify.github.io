@@ -1,0 +1,34 @@
+---
+pageKey: contact
+---
+{% from "partials/icons.njk" import icon %}
+{% set c = t.contactPage %}
+{% set hero = { label: c.label, title: c.title, lead: c.lead } %}
+{% include "partials/page-hero.njk" %}
+
+<section class="section">
+  <div class="container grid grid--2">
+    <div>
+      {% set ctaLocation = "contact-page" %}
+      {% include "partials/channels.njk" %}
+      <p class="contact__address contact__address--spaced">
+        {{ icon("pin") }}
+        <span><strong>{{ t.channels.addressTitle }}:</strong> {{ site.contact.address.display }}</span>
+      </p>
+    </div>
+    <div class="stack">
+      <div class="card">
+        <h2 class="card__heading">{{ c.briefTitle }}</h2>
+        <ul class="checklist">
+          {% for item in c.brief %}<li>{{ icon("check", 16) }} {{ item }}</li>{% endfor %}
+        </ul>
+      </div>
+      <div class="card">
+        <h2 class="card__heading">{{ c.nextTitle }}</h2>
+        <ol class="mini-steps">
+          {% for s in c.next %}<li><strong>{{ s.title }}.</strong> {{ s.text }}</li>{% endfor %}
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>

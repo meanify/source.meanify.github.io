@@ -1,0 +1,20 @@
+---
+pageKey: faq
+---
+{% set f = t.faqPage %}
+{% set hero = { label: f.label, title: f.title, lead: f.lead } %}
+{% include "partials/page-hero.njk" %}
+
+<section class="section">
+  <div class="container container--narrow">
+    {% for g in f.groups %}
+    <div class="faq-group">
+      <h2 class="faq-group__title">{{ g.title }}</h2>
+      {% set items = g.items %}
+      {% include "partials/faq-list.njk" %}
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% include "partials/cta-band.njk" %}

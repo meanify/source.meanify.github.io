@@ -1,0 +1,62 @@
+# Builds the site with Eleventy and publishes _site/ to the GitHub Pages repo
+# meanify/meanify.github.io (served at www.meanify.eu).
+#
+# One-time setup:
+#   1. ssh-keygen -t ed25519 -C "deploy source.meanify.github.io" -f meanify-deploy -N ""
+#   2. meanify/meanify.github.io → Settings → Deploy keys → add meanify-deploy.pub (allow write access)
+#   3. meanify/source.meanify.github.io → Settings → Secrets → Actions → new secret
+#      ACTIONS_DEPLOY_KEY with the contents of meanify-deploy (private key)
+name: Build and deploy
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+      - run: npm run build
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: _site
+
+  deploy:
+    needs: build
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: site
+          path: _site
+
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          external_repository: meanify/meanify.github.io
+          publish_branch: master
+          publish_dir: ./_site
+          cname: www.meanify.eu
+          user_name: github-actions[bot]
+          user_email: github-actions[bot]@users.noreply.github.com
+          commit_message: "Deploy ${{ github.sha }}"

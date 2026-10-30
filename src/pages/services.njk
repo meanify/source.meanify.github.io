@@ -1,0 +1,29 @@
+---
+pageKey: services
+---
+{% from "partials/service-card.njk" import serviceCard %}
+{% set hero = { label: t.servicesHub.label, title: t.servicesHub.title, lead: t.servicesHub.lead } %}
+{% include "partials/page-hero.njk" %}
+
+<section class="section" aria-labelledby="servicesTitle">
+  <div class="container">
+    <h2 class="visually-hidden" id="servicesTitle">{{ t.nav.services }}</h2>
+    <ul class="svc-grid">
+      {% for key in site.services %}
+      {{ serviceCard(t.services[key], site.pages[key][lang], t.servicePage.learnMore, t.home.services.featured if loop.first else "") }}
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section section--alt" aria-labelledby="notSureTitle">
+  <div class="container container--narrow center">
+    <h2 class="section__title" id="notSureTitle">{{ t.servicesHub.notSureTitle }}</h2>
+    <p class="section__intro">{{ t.servicesHub.notSureText }}</p>
+    <p class="section__more"><a href="{{ site.pages.process[lang] }}" class="btn btn--secondary">{{ t.home.process.cta }}</a></p>
+  </div>
+</section>
+
+{% include "partials/checklist-teaser.njk" %}
+
+{% include "partials/cta-band.njk" %}

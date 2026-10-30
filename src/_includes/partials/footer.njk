@@ -1,0 +1,61 @@
+{% from "partials/icons.njk" import icon %}
+<footer class="footer" id="footer">
+  <div class="footer__container">
+    <div class="footer__grid">
+      <div class="footer__col">
+        <h2 class="footer__col-title">{{ t.footer.servicesTitle }}</h2>
+        <ul class="footer__list">
+          {% for key in site.services %}
+          <li><a href="{{ site.pages[key][lang] }}" class="footer__link">{{ t.services[key].name }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h2 class="footer__col-title">{{ t.footer.companyTitle }}</h2>
+        <ul class="footer__list">
+          {% for key in ["process", "insights", "about", "faq", "contact"] %}
+          <li><a href="{{ site.pages[key][lang] }}" class="footer__link">{{ t.nav[key] }}</a></li>
+          {% endfor %}
+          <li><a href="{{ site.pages.checklist[lang] }}" class="footer__link">{{ t.checklist.title }}</a></li>
+          <li><a href="{{ site.pages.privacy[lang] }}" class="footer__link">{{ t.footer.privacy }}</a></li>
+          <li><a href="{{ site.pages.terms[lang] }}" class="footer__link">{{ t.footer.terms }}</a></li>
+          <li><a href="{{ site.pages.cookies[lang] }}" class="footer__link">{{ t.footer.cookies }}</a></li>
+          <li><button type="button" class="footer__link footer__link--button" data-consent-open>{{ t.footer.cookieSettings }}</button></li>
+        </ul>
+      </div>
+
+      <div class="footer__col footer__col--wide">
+        <h2 class="footer__col-title">{{ t.footer.contactTitle }}</h2>
+        <address class="footer__contact">
+          <span>{{ site.contact.address.display }}</span>
+          <span class="footer__phone">
+            <a href="{{ site.contact.phoneHref }}" data-lead="phone" data-cta="footer">{{ site.contact.phone }}</a>
+            <span>{{ t.common.phoneDisclaimer }}</span>
+          </span>
+          <a href="{{ mailUrl }}" data-lead="email" data-cta="footer">{{ site.contact.email }}</a>
+        </address>
+        <div class="footer__socials">
+          <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener noreferrer" class="footer__social" aria-label="{{ t.footer.linkedin }}">{{ icon("linkedin") }}</a>
+          <a href="{{ site.social.facebook }}" target="_blank" rel="noopener noreferrer" class="footer__social" aria-label="{{ t.footer.facebook }}">{{ icon("facebook") }}</a>
+          <a href="{{ waUrl }}" target="_blank" rel="noopener noreferrer" class="footer__social" aria-label="{{ t.footer.whatsapp }}" data-lead="whatsapp" data-cta="footer">{{ icon("whatsapp") }}</a>
+        </div>
+      </div>
+    </div>
+
+    <p class="footer__livro">
+      <a href="https://www.livroreclamacoes.pt/Inicio/" target="_blank" rel="noopener noreferrer" class="footer__livro-link">
+        <img src="/logos/logotipo-livro-reclamacoes.png" alt="{{ t.footer.livroReclamacoes }}" width="200" height="48" class="footer__livro-logo" loading="lazy" decoding="async">
+      </a>
+    </p>
+
+    <div class="footer__bottom">
+      <p>&copy; {{ site.buildDate.getFullYear() }} {{ t.footer.copyright }}</p>
+      <div class="footer__legal">
+        <a href="{{ site.pages.privacy[lang] }}">{{ t.footer.privacy }}</a>
+        <a href="{{ site.pages.terms[lang] }}">{{ t.footer.terms }}</a>
+        <a href="{{ site.pages.cookies[lang] }}">{{ t.footer.cookies }}</a>
+      </div>
+    </div>
+  </div>
+</footer>

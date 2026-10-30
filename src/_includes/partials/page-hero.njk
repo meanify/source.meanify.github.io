@@ -1,0 +1,11 @@
+{# Expects: hero = { label, title, lead } #}
+<section class="page-hero">
+  <div class="container">
+    {% include "partials/breadcrumb.njk" %}
+    <p class="section-label">{{ hero.label }}</p>
+    <h1 class="page-hero__title">{{ hero.title }}</h1>
+    <p class="page-hero__lead">{{ hero.lead }}</p>
+    <p class="page-hero__updated">{{ t.legal.updatedLabel }}: <time datetime="{{ site.contentUpdated }}">{{ site.contentUpdated | longDate(lang) }}</time></p>
+  </div>
+  <div class="hero__gradient-bg" aria-hidden="true"></div>
+</section>

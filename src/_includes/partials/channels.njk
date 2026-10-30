@@ -1,0 +1,37 @@
+{% from "partials/icons.njk" import icon %}
+{% set ch = t.channels %}
+<ul class="contact__channels">
+  <li>
+    <a href="{{ waUrl }}" class="channel channel--primary" target="_blank" rel="noopener noreferrer" data-lead="whatsapp" data-cta="{{ ctaLocation }}">
+      <span class="channel__icon">{{ icon("whatsapp", 24) }}</span>
+      <span class="channel__text">
+        <span class="channel__title">{{ ch.whatsappTitle }}</span>
+        <span class="channel__desc">{{ ch.whatsappDesc }}</span>
+        <span class="channel__value">{{ site.contact.phone }}</span>
+      </span>
+      <span class="channel__cta">{{ ch.whatsappCta }} →</span>
+    </a>
+  </li>
+  <li>
+    <a href="{{ mailUrl }}" class="channel" data-lead="email" data-cta="{{ ctaLocation }}">
+      <span class="channel__icon">{{ icon("mail", 24) }}</span>
+      <span class="channel__text">
+        <span class="channel__title">{{ ch.emailTitle }}</span>
+        <span class="channel__desc">{{ ch.emailDesc }}</span>
+        <span class="channel__value">{{ site.contact.email }}</span>
+      </span>
+      <span class="channel__cta">{{ ch.emailCta }} →</span>
+    </a>
+  </li>
+  <li>
+    <a href="{{ site.contact.phoneHref }}" class="channel" data-lead="phone" data-cta="{{ ctaLocation }}">
+      <span class="channel__icon">{{ icon("phone", 24) }}</span>
+      <span class="channel__text">
+        <span class="channel__title">{{ ch.phoneTitle }}</span>
+        <span class="channel__desc">{{ ch.phoneDesc }}</span>
+        <span class="channel__value">{{ site.contact.phone }} <small>{{ t.common.phoneDisclaimer }}</small></span>
+      </span>
+      <span class="channel__cta">{{ ch.phoneCta }} →</span>
+    </a>
+  </li>
+</ul>

@@ -1,0 +1,17 @@
+{% set doc = t.legal[pageKey] %}
+<article class="legal">
+  <div class="legal__container">
+    {% include "partials/breadcrumb.njk" %}
+    <h1 class="legal__title">{{ doc.title }}</h1>
+    <p class="legal__updated">{{ t.legal.updatedLabel }}: {{ t.legal.updated }}</p>
+    {% for s in doc.sections %}
+    <section class="legal__section">
+      <h2>{{ s.title }}</h2>
+      <p>{{ s.text }}</p>
+    </section>
+    {% endfor %}
+    {% if pageKey == "cookies" %}
+    <p><button type="button" class="btn btn--secondary" data-consent-open>{{ t.footer.cookieSettings }}</button></p>
+    {% endif %}
+  </div>
+</article>

@@ -1,0 +1,68 @@
+---
+pageKey: process
+---
+{% from "partials/icons.njk" import icon %}
+{% set p = t.processPage %}
+{% set hero = { label: p.label, title: p.title, lead: p.lead } %}
+{% include "partials/page-hero.njk" %}
+
+<section class="section" aria-labelledby="stepsTitle">
+  <div class="container">
+    <header class="section__header">
+      <h2 class="section__title" id="stepsTitle">{{ p.stepsTitle }}</h2>
+    </header>
+    {% set steps = p.steps %}
+    {% set humanLabel = t.servicePage.humanLabel %}
+    {% include "partials/steps.njk" %}
+  </div>
+</section>
+
+<section class="section section--alt" aria-labelledby="splitTitle">
+  <div class="container container--narrow">
+    <header class="section__header">
+      <h2 class="section__title" id="splitTitle">{{ p.splitTitle }}</h2>
+    </header>
+    <div class="table-wrap">
+      <table class="split-table">
+        <thead>
+          <tr><th scope="col">{{ p.splitAi }}</th><th scope="col">{{ p.splitHuman }}</th></tr>
+        </thead>
+        <tbody>
+          {% for row in p.split %}
+          <tr><td>{{ row.ai }}</td><td>{{ icon("user", 16) }} {{ row.human }}</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="fdeTitle">
+  <div class="container grid grid--2 grid--center">
+    <div>
+      <h2 class="section__title" id="fdeTitle">{{ p.fdeTitle }}</h2>
+      <p class="section__intro">{{ p.fdeText }}</p>
+    </div>
+    <ul class="checklist card">
+      {% for item in p.fdePoints %}<li>{{ icon("check", 16) }} {{ item }}</li>{% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section section--alt" aria-labelledby="trustTitle">
+  <div class="container">
+    <header class="section__header">
+      <h2 class="section__title" id="trustTitle">{{ p.trustTitle }}</h2>
+    </header>
+    <ul class="grid grid--2">
+      {% for item in p.trust %}
+      <li class="card">
+        <h3 class="card__title">{{ item.title }}</h3>
+        <p class="card__text">{{ item.text }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+{% include "partials/cta-band.njk" %}

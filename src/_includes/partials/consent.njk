@@ -1,0 +1,10 @@
+<div class="consent" id="consentBanner" role="region" aria-labelledby="consentTitle" hidden>
+  <div class="consent__body">
+    <p class="consent__title" id="consentTitle">{{ t.consent.title }}</p>
+    <p class="consent__text">{{ t.consent.text }} <a href="{{ site.pages.cookies[lang] }}">{{ t.consent.more }}</a></p>
+  </div>
+  <div class="consent__actions">
+    <button type="button" class="btn btn--secondary consent__btn" data-consent="denied">{{ t.consent.reject }}</button>
+    <button type="button" class="btn btn--primary consent__btn" data-consent="granted">{{ t.consent.accept }}</button>
+  </div>
+</div>
